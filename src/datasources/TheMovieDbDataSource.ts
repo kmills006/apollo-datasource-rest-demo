@@ -6,10 +6,6 @@ export class TheMovieDbDataSource extends RESTDataSource {
   baseURL: string = THE_MOVIE_DB_BASE_URL;
   apiKey: string = THE_MOVIE_DB_API_KEY;
 
-  willSendRequest(request) {
-    console.log('request: ', request);
-  }
-
   async searchMovies(query: string) {
     const [error, data] = await to(this.get('/3/search/movie', {
       query,

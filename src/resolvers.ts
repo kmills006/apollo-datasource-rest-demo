@@ -12,5 +12,9 @@ const books = [
 export const resolvers = {
   Query: {
     books: () => books,
+
+    searchMovies: async (obj, { title }, { dataSources: { theMovieDbApi } }) => (
+      theMovieDbApi.searchMovies(title)
+    ),
   },
 };

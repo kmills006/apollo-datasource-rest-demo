@@ -6,6 +6,11 @@ Demo repo playing using Apollo Server 2.0 and the new [apollo-datasource-rest](h
 
 ### [The Movie Database](https://www.themoviedb.org/documentation/api)
 
+#### Environment Variables
+
+1. `THE_MOVIE_DB_API_KEY`: You can obtain on from your [account](https://www.themoviedb.org) page
+2. `THE_MOVIE_DB_BASE_URL`: https://api.themoviedb.org
+
 #### Queries
 
 ```

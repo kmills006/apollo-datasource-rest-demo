@@ -1,8 +1,10 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
 import to from 'await-to-js';
+import { THE_MOVIE_DB_API_KEY, THE_MOVIE_DB_BASE_URL } from '../config';
 
 export class TheMovieDbDataSource extends RESTDataSource {
-  baseURL = 'https://api.themoviedb.org/'; // TODO: move to env
+  baseURL: string = THE_MOVIE_DB_BASE_URL;
+  apiKey: string = THE_MOVIE_DB_API_KEY;
 
   willSendRequest(request) {
     console.log('request: ', request);
@@ -10,7 +12,7 @@ export class TheMovieDbDataSource extends RESTDataSource {
 
   async searchMovies(searchPhrase: string) {
     const [error, data] = await to(this.get('/3/search/movie', {
-      api_key: '25ef7a17f865553a28f09aab4124a8ac', // TODO: move to env
+      api_key: this.apiKey,
       query: searchPhrase,
     }));
 

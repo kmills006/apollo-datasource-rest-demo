@@ -15,5 +15,6 @@ Demo repo playing using Apollo Server 2.0 and the new [apollo-datasource-rest](h
 
 ```
 searchMovies(query: String)
+getMovie(movieId: Int)
 ```
 

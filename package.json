@@ -1,0 +1,19 @@
+{
+  "name": "apollo-datasource-rest-demo",
+  "scripts": {
+    "dev": "tsc-watch --onSuccess \"node dist/index.js\"",
+    "start": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "apollo-server": "^2.0.0-rc.0",
+    "graphql": "^0.13.2"
+  },
+  "devDependencies": {
+    "@types/node": "^10.3.4",
+    "graphql-cli": "2.16.3",
+    "ts-node": "6.1.0",
+    "tslint": "^5.10.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "typescript": "2.9.2"
+  }
+}

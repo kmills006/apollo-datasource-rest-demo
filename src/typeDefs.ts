@@ -17,6 +17,6 @@ export const typeDefs = gql`
 
   type Query {
     books: [Book]
-    searchMovies(title: String): [Movie]
+    searchMovies(query: String!): [Movie]
   }
 `;

@@ -10,10 +10,10 @@ export class TheMovieDbDataSource extends RESTDataSource {
     console.log('request: ', request);
   }
 
-  async searchMovies(searchPhrase: string) {
+  async searchMovies(query: string) {
     const [error, data] = await to(this.get('/3/search/movie', {
+      query,
       api_key: this.apiKey,
-      query: searchPhrase,
     }));
 
     if (error) {

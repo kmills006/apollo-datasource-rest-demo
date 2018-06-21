@@ -18,4 +18,16 @@ export class TheMovieDbDataSource extends RESTDataSource {
 
     return data.results;
   }
+
+  async getMovie(movieId: number) {
+    const [error, data] = await to(this.get(`/3/movie/${movieId}`, {
+      api_key: this.apiKey,
+    }));
+
+    if (error) {
+      throw error;
+    }
+
+    return data;
+  }
 }
